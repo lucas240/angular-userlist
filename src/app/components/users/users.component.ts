@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { UserModel } from "../../models/UserModel";
 import { UserService } from "../../services/user.service";
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-users',
@@ -9,6 +10,7 @@ import { UserService } from "../../services/user.service";
 })
 export class UsersComponent implements OnInit {
   @Input() user: UserModel;
+  @ViewChild(MatTable) table: MatTable<any>;
 
   users:UserModel[];
   displayedColumns: string[] = ['id', 'name', 'username', 'email', 'action'];
@@ -31,6 +33,7 @@ export class UsersComponent implements OnInit {
   addUser(user:UserModel){
     this.userService.addUser(user).subscribe(user=>{
         this.users.push(user)
+        this.table.renderRows();
       })
   }
 
