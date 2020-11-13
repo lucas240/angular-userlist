@@ -1,13 +1,7 @@
-<div >
-    <p>
+<mat-list-item >
         {{user.name}}
+        {{user.username}}
+        {{user.email}}
         <button (click)="onEdit(user)" class="edit">Éditer</button>
         <button (click)="onDelete(user)" class="del">Supprimer</button>
-    </p>
-    <p>
-        {{user.username}}
-    </p>
-    <p>
-        {{user.email}}
-    </p>
-</div>
+</mat-list-item>

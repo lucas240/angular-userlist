@@ -9,6 +9,10 @@ import { UsersComponent } from './components/users/users.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list'; 
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
