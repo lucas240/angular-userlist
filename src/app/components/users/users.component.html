@@ -1,18 +1,7 @@
-<mat-card>
-    <app-add-user (addUser)="addUser($event)"></app-add-user>
-</mat-card>
-<!-- <mat-card>
-    <mat-list role="list">
-        <app-user-item 
-        *ngFor="let user of users" 
-        [user]="user"
-        (deleteUser)="deleteUser($event)"
-        >
-    </app-user-item>
-    </mat-list>
-</mat-card> -->
-
-<table mat-table [dataSource]="users" class="mat-elevation-z8">
+<div>
+  <app-add-user (addUser)="addUser($event)"></app-add-user>
+  <app-dialog-box></app-dialog-box>
+  <table mat-table [dataSource]="users" class="mat-elevation-z8">
     <!-- id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -43,6 +32,5 @@
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-  
-  
+  </table>
+</div>

@@ -9,10 +9,16 @@ import { UsersComponent } from './components/users/users.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatListModule} from '@angular/material/list'; 
-import {MatCardModule} from '@angular/material/card';
-import {MatTableModule} from '@angular/material/table';
+
+import { MatListModule } from '@angular/material/list'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,7 @@ import {MatTableModule} from '@angular/material/table';
     UsersComponent,
     UserItemComponent,
     HeaderComponent,
-    AddUserComponent
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,11 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
