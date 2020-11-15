@@ -1,0 +1,9 @@
+app-add-user {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.userList {
+  display: flex;
+  flex-wrap: wrap;
+}

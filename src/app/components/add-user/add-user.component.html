@@ -1,6 +1,19 @@
-<form (ngSubmit)="onSubmit()">
-    <input type="text" name="name" [(ngModel)]="name" placeholder="name...">
-    <input type="text" name="username" [(ngModel)]="username" placeholder="username...">
-    <input type="text" name="email" [(ngModel)]="email" placeholder="email...">
-    <input type="submit" value="Submit">
-</form>
+<mat-card>
+    <h3>Add user</h3>
+    <form (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" name="name"  [(ngModel)]="name" placeholder="name...">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" name="username" [(ngModel)]="username" placeholder="username...">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" name="email" [(ngModel)]="email" placeholder="email...">
+        </mat-form-field>
+        <br>
+        <button mat-button mat-flat-button color="primary"  type="submit" value="Submit">Add</button>
+    </form>
+</mat-card>

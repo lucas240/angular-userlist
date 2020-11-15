@@ -4,16 +4,22 @@ import { UserService } from "../../services/user.service";
 import { MatTable } from '@angular/material/table';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'app-table-user',
+  templateUrl: './table-user.component.html',
+  styleUrls: ['./table-user.component.css']
 })
-export class UsersComponent implements OnInit {
+export class TableUserComponent implements OnInit {
   @Input() user: UserModel;
   @ViewChild(MatTable) table: MatTable<any>;
 
   users:UserModel[];
-  displayedColumns: string[] = ['id', 'name', 'username', 'email', 'action'];
+  displayedColumns: string[] = [
+    'id', 
+    'name', 
+    'username', 
+    'email', 
+    'action'
+  ];
 
   constructor(private userService:UserService) { }
 
@@ -23,17 +29,10 @@ export class UsersComponent implements OnInit {
     })
   }
 
-  onDeleteUser(user:UserModel){
+  onDelete(user){
     // delete from UI
     this.users = this.users.filter(u => u.id != user.id)
     // delete from server
     this.userService.deleteUser(user).subscribe()
-  }
-
-  onAddUser(user:UserModel){
-    this.userService.addUser(user).subscribe(user=>{
-        this.users.push(user)
-        this.table.renderRows();
-      })
   }
 }

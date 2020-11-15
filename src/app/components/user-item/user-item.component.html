@@ -1,13 +1,32 @@
-<div >
-    <p>
-        {{user.name}}
-        <button (click)="onEdit(user)" class="edit">Éditer</button>
-        <button (click)="onDelete(user)" class="del">Supprimer</button>
-    </p>
-    <p>
-        {{user.username}}
-    </p>
-    <p>
-        {{user.email}}
-    </p>
-</div>
+<mat-card >
+        <p>
+                {{user.name}}
+        </p>
+        <p>
+                {{user.username}}
+        </p>
+        <p>
+                {{user.email}}
+        </p>
+        
+        <button mat-button mat-flat-button color="primary" (click)="onHide(hideForm)" class="del" *ngIf="!hideForm">Edit user</button>
+
+        <form (ngSubmit)="onEdit(user,hideForm)" *ngIf="hideForm">
+                <mat-form-field appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input matInput type="text" name="name"  [(ngModel)]="name" placeholder="name...">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" name="username" [(ngModel)]="username" placeholder="username...">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="text" name="email" [(ngModel)]="email" placeholder="email...">
+                </mat-form-field>
+                <br>
+                <button mat-button mat-flat-button color="primary"  type="submit" value="Submit">Edit user</button>
+                <button mat-button mat-stroked-button color="primary" (click)="onHide(hideForm)" class="del" *ngIf="hideForm">Hide Form</button>
+        </form>
+        <button mat-button mat-flat-button color="warn" (click)="onDelete(user)" class="del">Delete user</button>
+</mat-card>
