@@ -1,4 +1,5 @@
 <mat-card>
+    <h3>Add user</h3>
     <form (ngSubmit)="onSubmit()">
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
@@ -13,6 +14,6 @@
             <input matInput type="text" name="email" [(ngModel)]="email" placeholder="email...">
         </mat-form-field>
         <br>
-        <input type="submit" value="Submit">
+        <button mat-button mat-flat-button color="primary"  type="submit" value="Submit">Add</button>
     </form>
 </mat-card>

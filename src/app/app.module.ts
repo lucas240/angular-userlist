@@ -9,6 +9,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
+import { TableUserComponent } from './components/table-user/table-user.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
     UserItemComponent,
     HeaderComponent,
     AddUserComponent,
+    TableUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
