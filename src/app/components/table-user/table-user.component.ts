@@ -13,13 +13,19 @@ export class TableUserComponent implements OnInit {
   @ViewChild(MatTable) table: MatTable<any>;
 
   users:UserModel[];
+  displayedUserColumns: string[] = [
+    'id', 
+    'name', 
+    'username', 
+    'email'
+    ];  
   displayedColumns: string[] = [
     'id', 
     'name', 
     'username', 
-    'email', 
+    'email',
     'action'
-  ];
+    ];
 
   constructor(private userService:UserService) { }
 
