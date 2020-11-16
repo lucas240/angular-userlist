@@ -11,7 +11,7 @@ This project is my first Angular project, this project allow to manage users, yo
 
 - `ng serve` : Run a **dev server**. Navigate to `http://localhost:4200/`. 
 - `ng generate component component-name` : Generate a **new component**. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
--`ng build` : **Build** the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- `ng build` : **Build** the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 - `ng test` : Execute the **unit tests** via [Karma](https://karma-runner.github.io).
 - `ng e2e` : Execute the **end-to-end tests** via [Protractor](http://www.protractortest.org/).
 
